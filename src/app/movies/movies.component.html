@@ -1,24 +1,15 @@
-<a mat-fab routerLink="/add" class="fixed-bottom ml-auto m-4" aria-label="icon-button add"><mat-icon>add</mat-icon></a>
-<div style="width:auto;">
-  <mat-card *ngFor="let movie of movies" class="row" style="margin:10px; background-color:#e8eaf6">
-    <mat-card-header>
-      <mat-card-title>{{movie.title}}</mat-card-title>
-      <mat-card-subtitle>#{{movie.id}}</mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-actions class="ml-auto">
-        <button mat-flat-button routerLink="/detail/{{movie.id}}" aria-label="icon-button delete" color="primary"><mat-icon>remove_red_eye</mat-icon></button>
-      <button mat-flat-button (click)="delete(movie)" style="margin-left:5px" aria-label="icon-button delete" color="primary"><mat-icon>delete</mat-icon></button>
-    </mat-card-actions>
-    <mat-card-content class="row mr-5 ml-5">
-        <div class="col-lg-2 mt-1">
-          <img mat-card-image class="img-fluid rounded"  src="{{movie.image}}" alt="{{movie.title}}"/>
-        </div>
-        <div class="col-lg-10">
-        <p class="text-justify">{{movie.genres}}</p>
-          <p class="text-right">{{movie.year}}</p>
-          <p class="text-justify">{{movie.synopsis}}</p>
-        </div>
-    </mat-card-content>
-    
-  </mat-card>
+<div style="width:auto;" class="row">
+    <mat-card *ngFor="let movie of movies" class="col-sm-12 m-2 mx-auto" style="max-width:20rem; background-color:#e8eaf6">
+      <button mat-flat-button (click)="delete(movie)" style="margin-left:5px" aria-label="icon-button delete" color="primary" class="float-right"><mat-icon>delete</mat-icon></button>
+      <button mat-flat-button routerLink="/detail/{{movie.id}}" aria-label="icon-button delete" color="primary" class="float-right"><mat-icon>remove_red_eye</mat-icon></button>
+      <img mat-card-image class="img-fluid rounded mx-auto mt-2"  src="{{movie.image}}" alt="{{movie.title}}" style="height:400px"/>
+      <mat-card-header>
+        <mat-card-title>{{movie.title}}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+          <p class="text-justify">{{movie.genres}}</p>
+          <p class="text-justify">{{movie.year}}</p>
+      </mat-card-content>
+    </mat-card>
+    <button mat-fab routerLink="/add" class="flotante ml-auto m-4" aria-label="icon-button add"><mat-icon>add</mat-icon></button>
 </div>

@@ -9,19 +9,7 @@
     <meta name="description" content="Descubre las peliculas mas vistas." />
     <link rel="shortcut icon" type="image/png"
         href="https://www.brandcrowd.com/gallery/brands/pictures/picture14873725471122.png" sizes="64x64">
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
-
+    
     <style>
         .footer {
             color: white;
@@ -29,11 +17,10 @@
             padding: 3%
         }
     </style>
-
 </head>
 
 <body>
-    <mat-toolbar color="primary">
+    <mat-toolbar color="primary" role="header">
         <span class="fill-remaining-space">{{title}}</span>
         <button mat-button routerLink="/" class="ml-auto">
             <mat-icon class="example-icon" aria-hidden="false" aria-label="Home icon">home</mat-icon>
@@ -43,10 +30,11 @@
         </button>        
     </mat-toolbar>
 
-    <div style="width:auto; height:auto; padding:2%; margin-bottom:5%">
+    <main role="main" style="width:auto; min-height:70vh; padding:2%; margin-bottom:5%">
         <router-outlet></router-outlet>
-    </div>
-    <footer class="footer text-center" style="background-color: #3F51B5;">
+    </main>
+
+    <footer role="footer" class="footer text-center" style="background-color: #3F51B5;">
         <div class="py-12">
             <div class="container">
                 <div class="row">
@@ -56,31 +44,31 @@
                                 src="https://cdn141.picsart.com/278650953016211.png?type=webp&to=min&r=1024"
                                 alt="logo" style="width: 35px; margin-bottom:5%"></a>
                         <!-- Copyright -->
-                        <p class="mb-5 mb-md-0 font-size-xxs text-white">© 2020 {{title}}<br><a href="https://github.com/Soniatt93/TourOfMovies" class="text-light" style="text-decoration: none;">Github</a></p>
+                        <p class="mb-5 mb-md-0 font-size-xxs text-white">© 2020 {{title}}<br>Angular 9.0.1</p>
                     </div>
                     <div class="col-6 col-sm">
                         <!-- Heading -->
-                        <h5 class="mb-4 text-white">Acerca de {{title}}</h5>
+                        <h2 class="mb-2 text-white">Información</h2>
                         <!-- Links -->
                         <ul class="list-unstyled mb-7 mb-sm-0">
                             <li>
-                                <a class="text-light" routerLink="/contact" style="text-decoration: none;">Contacto</a>
+                                <a href="https://github.com/Soniatt93/TourOfMovies" target="_blank" class="text-light" style="text-decoration: none;">Github</a>
                             </li>
                             <li>
-                                <a class="text-white">Version Angular 9.0.1</a>
+                                <a href="https://sonia-angular-movies.firebaseapp.com/home" target="_blank" class="text-light" style="text-decoration: none;">Firebase</a>
                             </li>
                         </ul>
                     </div>
                     <div class="col-6 col-sm">
                         <!-- Heading -->
-                        <h5 class="mb-4 text-white"><a class="text-white">Condiciones de uso</a></h5>
+                        <h2 class="mb-2 text-white">Condiciones de uso</h2>
                         <!-- Links -->
                         <ul class="list-unstyled mb-0">
                             <li>
-                                <a class="text-white" href="#" style="text-decoration: none;">Proteccion de datos</a>
+                                <a class="text-white" routerLink="/proteccion-datos" style="text-decoration: none;">Proteccion de datos</a>
                             </li>
                             <li>
-                                <a class="text-white" href="#" style="text-decoration: none;">Uso de cookies</a>
+                                <a class="text-white" routerLink="/cookies" style="text-decoration: none;">Politica de cookies</a>
                             </li>
                         </ul>
                     </div>

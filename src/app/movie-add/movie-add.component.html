@@ -1,7 +1,7 @@
 <div style="width:auto;">
-<mat-card style="margin:10px;">
+  <mat-card style="margin:10px;">
     <mat-card-header>
-    <a mat-fab (click)="add(movieTitle.value, movieImage.value, movieGenres.value, movieYear.value, movieSinopsis.value); movieTitle.value=''" class="ml-auto" aria-label="icon-button edit"><mat-icon>save</mat-icon></a>
+    <button mat-mini-fab (click)="add(movieTitle.value, movieImage.value, movieGenres.value, movieYear.value, movieSinopsis.value); movieTitle.value=''" class="ml-auto" aria-label="icon-button edit"><mat-icon>save</mat-icon></button>
       <mat-card-title>Añadir Pelicula</mat-card-title>
       <mat-card-subtitle>Detalles</mat-card-subtitle>
     </mat-card-header>
@@ -32,4 +32,5 @@
           </mat-form-field>  
     </mat-card-content>
   </mat-card>  
+  <button (click)="goBack()" mat-button color="accent" class="float-right mr-2">Cancelar</button>
 </div>

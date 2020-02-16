@@ -6,7 +6,8 @@ import { MoviesComponent } from './movies/movies.component';
 import { MovieDetailComponent }  from './movie-detail/movie-detail.component';
 import { MovieEditComponent }  from './movie-edit/movie-edit.component';
 import { MovieAddComponent }  from './movie-add/movie-add.component';
-import { ContactComponent }   from './contact/contact.component';
+import { CookiesComponent }   from './cookies/cookies.component';
+import { ProteccionDatosComponent }   from './proteccion-datos/proteccion-datos.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -15,7 +16,8 @@ const routes: Routes = [
   { path: 'detail/:id', component: MovieDetailComponent },
   { path: 'edit/:id', component: MovieEditComponent },
   { path: 'add', component: MovieAddComponent },
-  { path: 'contact', component: ContactComponent }
+  { path: 'cookies', component: CookiesComponent },
+  { path: 'proteccion-datos', component: ProteccionDatosComponent }
 ];
 
 @NgModule({

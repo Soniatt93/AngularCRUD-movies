@@ -1,18 +1,24 @@
 <div style="width:auto;">
   <mat-card *ngIf="movie" style="margin:10px;">
     <mat-card-header>
-    <a mat-fab (click)="save()" class="ml-auto" aria-label="icon-button save"><mat-icon>save</mat-icon></a>
+    <button mat-mini-fab (click)="save()" class="ml-auto" aria-label="icon-button save"><mat-icon>save</mat-icon></button>
       <mat-card-title>{{movie.title | uppercase}}</mat-card-title>
-      <mat-card-subtitle>Detalles</mat-card-subtitle>
+      <mat-card-subtitle>#{{movie.id}}</mat-card-subtitle>
     </mat-card-header>
-    <mat-card-content class="row m-3">
+    <mat-card-content>
+      <div class="row">
         <div class="col-lg-3 col-sm-6 mt-1">
-          <img mat-card-image class="img-fluid rounded" src="{{movie.image}}" alt="{{movie.title}}"/>
+          <img mat-card-image class="img-fluid rounded mx-auto" src="{{movie.image}}" alt="{{movie.title}}"/>
         </div>
         <div class="col-lg-9 col-sm-6">
           <mat-form-field appearance="outline" style="width: 100%;">
             <mat-label>Titulo</mat-label>
             <input matInput [(ngModel)]="movie.title" placeholder="title"/>
+          </mat-form-field>
+          <br>
+          <mat-form-field appearance="outline" style="width: 100%;">
+            <mat-label>URL Portada</mat-label>
+            <input matInput [(ngModel)]="movie.image" placeholder="URL image"/>
           </mat-form-field>
           <br>
           <mat-form-field appearance="outline" style="width: 100%;">
@@ -30,6 +36,8 @@
             <textarea matInput [(ngModel)]="movie.synopsis" placeholder="synopsis" rows="10"></textarea>
           </mat-form-field>  
         </div>
+      </div>
     </mat-card-content>
-  </mat-card>  
+  </mat-card> 
+  <div class="mb-4"><button (click)="goBack()" mat-button color="accent" class="float-right mr-2">Cancelar</button></div>
 </div>

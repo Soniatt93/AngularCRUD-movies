@@ -13,6 +13,7 @@ import { MovieService }  from '../movie.service';
 export class MovieDetailComponent implements OnInit {
   
   movie: Movie;
+  checked: boolean;
 
   constructor(
     private route: ActivatedRoute,

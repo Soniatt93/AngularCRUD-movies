@@ -1,12 +1,14 @@
 <div style="width:auto">
-  <div class="mx-auto p-3 text-center rounded" style="background-color:#e8eaf6">
+  <div class="mx-auto p-5 text-center rounded" style="background-color:#e8eaf6">
     <h1 class="display-4 font-weight-normal">TOP PELICULAS</h1>
     <p class="lead font-weight-normal">Encuentra las mejores peliculas.</p>
     <button routerLink="/movies" mat-flat-button color="accent">Buscar</button>
   </div>
-  <div class="mx-auto p-3 text-center rounded">
-      <a *ngFor="let movie of movies" routerLink="/detail/{{movie.id}}" class="m-2">
-        <img mat-card-image class="img-fluid rounded mt-1" style="max-width:20rem" src="{{movie.image}}" alt="{{movie.title}}"/>
+  <div class="row text-center">
+    <div class="col-sm-12 m-2">
+      <a *ngFor="let movie of movies" routerLink="/detail/{{movie.id}}">
+        <img mat-card-image class="img-fluid rounded m-2" style="height:500px; width:320px;" src="{{movie.image}}" alt="{{movie.title}}"/>
       </a>
+    </div>
   </div>
 </div>
