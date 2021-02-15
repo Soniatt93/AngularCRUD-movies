@@ -1,4 +1,4 @@
-<div style="width:auto;" class="row">
+<div class="mx-auto row">
     <mat-card *ngFor="let movie of movies" class="col-sm-12 m-2 mx-auto" style="max-width:20rem; background-color:#e8eaf6">
       <a mat-flat-button (click)="delete(movie)" style="margin-left:5px" aria-label="icon-button delete" color="primary" class="float-right"><mat-icon>delete</mat-icon></a>
       <a mat-flat-button routerLink="/detail/{{movie.id}}" target="_top" aria-label="icon-button delete" color="primary" class="float-right"><mat-icon>remove_red_eye</mat-icon></a>
