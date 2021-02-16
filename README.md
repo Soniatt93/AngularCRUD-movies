@@ -1,7 +1,10 @@
 # Angular CRUD
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.0.
-<br>[Tour of movies](https://stt-movies.web.app)
+Project showcasing my CRUD (Create, Read, Update, Delete) generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.0.
+<br>
+
+## Demo
+You can play around with code demo [here](https://stt-movies.web.app).
 
 ## Development server
 
