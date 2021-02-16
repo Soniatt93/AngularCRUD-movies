@@ -1,6 +1,6 @@
 # Angular CRUD
 
-A simple Angular CRUD (Create, Read, Update, Delete) generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.0.
+An in-memory web api for Angular demos and tests that emulates CRUD operations over a REST API generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.0. It intercepts Angular Http and HttpClient requests that would otherwise go to the remote server and redirects them to an in-memory data store. This in-memory web api service processes an HTTP request and returns an Observable of HTTP Response object in the manner of a RESTy web api.
 <br>
 
 ## Demo
