@@ -1,6 +1,6 @@
 # Angular CRUD
 
-Project showcasing my CRUD (Create, Read, Update, Delete) generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.0.
+A simple Angular CRUD (Create, Read, Update, Delete) generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.0.
 <br>
 
 ## Demo
