@@ -1,7 +1,7 @@
-# Angular CRUD - Movies
+# Angular CRUD
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.0.
-<br>[Ver proyecto](https://sonia-angular-movies.firebaseapp.com/home)
+<br>[Tour of movies](https://sonia-angular-movies.firebaseapp.com/home)
 
 ## Development server
 
